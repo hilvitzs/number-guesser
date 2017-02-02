@@ -14,18 +14,6 @@ function getRandom() {
   randomNumber = Math.floor(Math.random() * (100 - 1) + 1);
 };
 
-function enableButtons() {
-  guess.disabled = false;
-  clear.disabled = false;
-  resetButton.disabled = false;
-};
-
-function disableButtons() {
-    guess.disabled = true;
-    clear.disabled = true;
-    resetButton.disabled = true;
-  }
-
 window.onload = function() {
   getRandom();
 };
@@ -70,16 +58,13 @@ clear.addEventListener('click', function () {
 });
 
 userInput.addEventListener('keyup', function() {
-  enableButtons();
-});
-
-
-userInput.addEventListener('keyup', function() {
   if (userInput.value === "") {
      clear.disabled = true;
      guess.disabled = true;
    }
    else {
      clear.disabled = false;
+     guess.disabled = false;
+     resetButton.disabled = false;
    }
  });

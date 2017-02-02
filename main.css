@@ -67,6 +67,7 @@ button:disabled {
   background-color: #D0D2D3;
 }
 
+
 @media screen and (max-width: 400px) {
   .inputField {
     width: 75%;

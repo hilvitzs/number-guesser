@@ -72,7 +72,7 @@ userInput.addEventListener('keyup', function() {
 })
 
 
-clear.addEventListener('click', function() {
+userInput.addEventListener('keyup', function() {
   if (userInput.value === "") {
      clear.disabled = true;
      guess.disabled = true;

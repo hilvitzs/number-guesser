@@ -5,11 +5,6 @@ var userInput = document.querySelector('.inputField');
 var clear = document.querySelector('#clear');
 var resetButton = document.querySelector('#reset');
 
-
-resetButton.addEventListener('click', function() {
-  window.location.reload();
-});
-
 function getRandom() {
   randomNumber = Math.floor(Math.random() * (100 - 1) + 1);
 };
@@ -55,6 +50,10 @@ clear.addEventListener('click', function () {
   document.querySelector('input').value = "";
   clear.disabled = true;
   guess.disabled = true;
+});
+
+resetButton.addEventListener('click', function() {
+  window.location.reload();
 });
 
 userInput.addEventListener('keyup', function() {

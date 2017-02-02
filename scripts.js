@@ -12,11 +12,23 @@ resetButton.addEventListener('click', function() {
 
 function getRandom() {
   randomNumber = Math.floor(Math.random() * (100 - 1) + 1);
-}
+};
+
+function enableButtons() {
+  guess.disabled = false;
+  clear.disabled = false;
+  resetButton.disabled = false;
+};
+
+function disableButtons() {
+    guess.disabled = true;
+    clear.disabled = true;
+    resetButton.disabled = true;
+  }
 
 window.onload = function() {
   getRandom();
-}
+};
 
 guess.addEventListener('click', function() {
   var userInput = document.querySelector('.inputField').value;
@@ -29,10 +41,6 @@ guess.addEventListener('click', function() {
   }
 });
 
-clear.addEventListener('click', function () {
-  document.querySelector('input').value = "";
-});
-
 guess.addEventListener('click', function() {
   if (userInput.value == randomNumber) {
     document.querySelector('h3').innerText = "BOOM!";
@@ -43,7 +51,7 @@ guess.addEventListener('click', function() {
   else if (userInput.value > randomNumber) {
     document.querySelector('h3').innerText = "Your guess is too high.";
   }
-})
+});
 
 guess.addEventListener('click', function() {
   if (userInput.value > 100) {
@@ -53,23 +61,15 @@ guess.addEventListener('click', function() {
     document.querySelector('.empty').innerText = "";
     document.querySelector('h3').innerText = "Out of Range";
   }
-})
+});
 
-function enableButtons() {
-  guess.disabled = false;
-  clear.disabled = false;
-  resetButton.disabled = false;
-}
-
-function disableButtons() {
-    guess.disabled = true;
-    clear.disabled = true;
-    resetButton.disabled = true;
-  }
+clear.addEventListener('click', function () {
+  document.querySelector('input').value = "";
+});
 
 userInput.addEventListener('keyup', function() {
   enableButtons();
-})
+});
 
 
 userInput.addEventListener('keyup', function() {

@@ -68,6 +68,10 @@ button:disabled {
 
 
 @media screen and (max-width: 400px) {
+  h1 {
+    height: 100px;
+  }
+
   .inputField {
     width: 76%;
     }

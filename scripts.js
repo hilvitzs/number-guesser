@@ -65,6 +65,8 @@ guess.addEventListener('click', function() {
 
 clear.addEventListener('click', function () {
   document.querySelector('input').value = "";
+  clear.disabled = true;
+  guess.disabled = true;
 });
 
 userInput.addEventListener('keyup', function() {

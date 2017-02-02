@@ -69,7 +69,7 @@ button:disabled {
 
 @media screen and (max-width: 400px) {
   .inputField {
-    width: 75%;
+    width: 76%;
     }
 
   .empty {

@@ -7,11 +7,16 @@ var resetButton = document.querySelector('#reset');
 
 function getRandom() {
   randomNumber = Math.floor(Math.random() * (100 - 1) + 1);
+  console.log(randomNumber);
 };
+
+
 
 window.onload = function() {
   getRandom();
 };
+
+
 
 guess.addEventListener('click', function() {
   var userInput = document.querySelector('.inputField').value;
